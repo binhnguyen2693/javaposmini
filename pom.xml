@@ -24,6 +24,7 @@
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
+      
     </repositories>
 
     <dependencies>
@@ -38,6 +39,8 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+        
+
     </dependencies>
 
     <build>
