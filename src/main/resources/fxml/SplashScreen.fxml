@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.mycompany.posmini.SplashController"
+           onMouseClicked="#goToLogin">
+    <ImageView fx:id="logoImage" fitHeight="200" fitWidth="200" />
+    <Text text="POS Mini" style="-fx-font-size: 28px; -fx-font-weight: bold;" />
+</StackPane>
