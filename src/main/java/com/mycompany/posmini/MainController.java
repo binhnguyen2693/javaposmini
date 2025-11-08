@@ -14,7 +14,7 @@ public class MainController {
 
     @FXML
     private void showProducts() {
-        System.out.println("Mở trang Quản lý sản phẩm");
+        System.out.println("Mở trang Quản lý sản phẩm Pro");
     }
 
     @FXML
