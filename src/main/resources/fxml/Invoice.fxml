@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.mycompany.posmini.InvoiceController"
+      alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+    <Label text="Hóa đơn thanh toán" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <TableView fx:id="invoiceTable" prefWidth="400">
+        <columns>
+            <TableColumn text="Tên hàng" prefWidth="150"/>
+            <TableColumn text="Số lượng" prefWidth="100"/>
+            <TableColumn text="Đơn giá" prefWidth="100"/>
+        </columns>
+    </TableView>
+    <Label fx:id="totalLabel" text="Tổng cộng: 0đ" />
+    <Button text="Quay lại" onAction="#goBack"/>
+</VBox>

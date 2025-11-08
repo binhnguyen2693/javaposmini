@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mycompany.posmini.MainController">
+
+    <!-- Menu bên trái -->
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <Button text="Thống kê / Báo cáo" onAction="#showStatistics"/>
+            <Button text="Quản lý sản phẩm" onAction="#showProducts"/>
+            <Button text="Quản lý nhân viên" onAction="#showEmployees"/>
+            <Button text="Quản lý hóa đơn" onAction="#showInvoices"/>
+        </VBox>
+    </left>
+
+    <!-- Phần nhập mã hàng bên phải -->
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <Label text="Nhập mã hàng hóa:"/>
+            <TextField fx:id="productCodeField" promptText="Nhập mã..." />
+            <Button text="Tìm" onAction="#searchProduct"/>
+        </VBox>
+    </center>
+
+    <!-- Thanh công cụ dưới cùng -->
+    <bottom>
+        <HBox spacing="15" alignment="CENTER" style="-fx-padding: 10; -fx-background-color: #eaeaea;">
+            <Button text="Thêm" onAction="#addItem"/>
+            <Button text="Sửa" onAction="#editItem"/>
+            <Button text="Xóa" onAction="#deleteItem"/>
+            <Button text="Thanh toán" onAction="#handlePayment"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
