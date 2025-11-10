@@ -37,13 +37,13 @@ public class MainController {
     @FXML
     private void showStatistics(ActionEvent event) throws Exception {
         System.out.println("Hiển thị thống kê");
-        App.setRoot("secondary");
+        App.setRoot("Statistics");
     }
 
     @FXML
     private void showEmployees(ActionEvent event) throws Exception {
-        System.out.println("Hiển thị nhân viên");
-        App.setRoot("Login");
+        System.out.println("Hien thi nhan ");
+        App.setRoot("Employees");
     }
 
     @FXML

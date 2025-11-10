@@ -14,7 +14,6 @@ public class App extends Application {
         primaryStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/SplashScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("/css/splashscreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle("POS Mini");
         stage.show();

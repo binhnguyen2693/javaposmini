@@ -5,3 +5,4 @@ com\mycompany\posmini\MainController.class
 com\mycompany\posmini\App.class
 com\mycompany\posmini\DBConnect.class
 com\mycompany\posmini\LoginController.class
+com\mycompany\posmini\EmployeesController.class

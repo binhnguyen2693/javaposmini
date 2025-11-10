@@ -2,6 +2,7 @@ package com.mycompany.posmini;
 
 import javafx.fxml.FXML;
 
+
 public class SplashController {
 
     @FXML
