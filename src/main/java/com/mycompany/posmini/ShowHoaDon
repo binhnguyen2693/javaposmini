@@ -1,0 +1,43 @@
+package com.mycompany.posmini;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class ShowHoaDon {
+    public static void main(String[] args) {
+        String url = "jdbc:sqlserver://ANHTOET:1433;databaseName=Posmini;encrypt=false;";
+        String user = "sa";       // sửa theo tài khoản SQL của bạn
+        String password = "12345"; // sửa theo mật khẩu SQL của bạn
+
+        try (Connection conn = DriverManager.getConnection(url, user, password);
+             Statement stmt = conn.createStatement()) {
+
+            // Join với bảng nhân viên để lấy tên NV
+            String sql = "SELECT hd.MaHD, hd.NgayLap, hd.TongTien, hd.HinhThuc, nv.TenNV " +
+                         "FROM QuanLyHoaDon hd " +
+                         "LEFT JOIN QuanLyNhanVien nv ON hd.MaNV = nv.MaNV";
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            System.out.println("===== DANH SÁCH HÓA ĐƠN =====");
+            System.out.println("MaHD | NgayLap | TongTien | HinhThuc | NhanVien");
+            System.out.println("---------------------------------------------------");
+
+            while (rs.next()) {
+                int maHD = rs.getInt("MaHD");
+                String ngayLap = rs.getString("NgayLap");
+                double tongTien = rs.getDouble("TongTien");
+                String hinhThuc = rs.getString("HinhThuc");
+                String tenNV = rs.getString("TenNV");
+
+                System.out.println(maHD + " | " + ngayLap + " | " + tongTien + " | " + hinhThuc + " | " + tenNV);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Không kết nối được tới SQL Server!");
+            e.printStackTrace();
+        }
+    }
+}
