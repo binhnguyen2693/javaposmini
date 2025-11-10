@@ -14,14 +14,15 @@ public class App extends Application {
         primaryStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/SplashScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("/css/splashscreen.css").toExternalForm());
         stage.setScene(scene);
         stage.setTitle("POS Mini");
         stage.show();
     }
 
-    // Hàm chuyển màn hình
+    // ✅ Hàm chuyển màn hình chuẩn
     public static void setRoot(String fxml) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fxml/" + fxml + ".fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -30,4 +31,6 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+    
 }
+

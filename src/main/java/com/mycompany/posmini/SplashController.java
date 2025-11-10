@@ -6,6 +6,7 @@ public class SplashController {
 
     @FXML
     private void goToLogin() throws Exception {
-        App.setRoot("/fxml/Login");
+        App.setRoot("Login");
     }
+
 }

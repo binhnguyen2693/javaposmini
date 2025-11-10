@@ -17,7 +17,7 @@ public class LoginController {
         String pass = passwordField.getText();
 
         if (user.equals("binhnguyen") && pass.equals("hnd")) {
-        App.setRoot("/fxml/Main");
+        App.setRoot("Main");
         } else {
             errorLabel.setText("Sai tài khoản hoặc mật khẩu!");
         }

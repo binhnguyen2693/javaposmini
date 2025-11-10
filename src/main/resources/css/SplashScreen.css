@@ -1,0 +1,14 @@
+.text-3 {
+    -fx-font-family: 'Inspiration';
+    -fx-font-weight: normal;
+    -fx-font-size: 32px;
+    -fx-text-fill: black; /* dùng -fx-text-fill thay cho color */
+}
+
+.rectangle-43-2 {
+    -fx-background-color: rgba(217,217,217,1);
+}
+.frame-1-1 {
+    -fx-background-color: #ffffff;
+    -fx-padding: 24px;
+}
