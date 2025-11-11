@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.mycompany.posmini.InvoiceController"
-      alignment="CENTER" spacing="10" style="-fx-padding: 20;">
-    <Label text="Hóa đơn thanh toán" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
-    <TableView fx:id="invoiceTable" prefWidth="400">
-        <columns>
-            <TableColumn text="Tên hàng" prefWidth="150"/>
-            <TableColumn text="Số lượng" prefWidth="100"/>
-            <TableColumn text="Đơn giá" prefWidth="100"/>
-        </columns>
-    </TableView>
-    <Label fx:id="totalLabel" text="Tổng cộng: 0đ" />
-    <Button text="Quay lại" onAction="#goBack"/>
-</VBox>
+<AnchorPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.posmini.EmployeesController">
+
+    <VBox spacing="10" alignment="CENTER" layoutX="0" layoutY="0" prefWidth="600" prefHeight="400">
+        <Label text="Danh sách nhân viên" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        <TableView fx:id="tableEmployee" prefWidth="600" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="colMaNV" text="Mã NV" prefWidth="100"/>
+                <TableColumn fx:id="colTenNV" text="Tên NV" prefWidth="200"/>
+                <TableColumn fx:id="colChucVu" text="Chức vụ" prefWidth="150"/>
+                <TableColumn fx:id="colSoDT" text="Số điện thoại" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+</AnchorPane>

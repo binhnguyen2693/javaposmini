@@ -1,0 +1,76 @@
+
+@font-face {
+    font-family: 'Inria Sans';
+    src: url('fonts/inria-sans.ttf');
+}
+
+@font-face {
+    font-family: 'Inspiration';
+    src: url('fonts/inspiration.ttf');
+}
+
+:root {
+    --font-family-inria-sans: 'Inria Sans', sans-serif;
+    --font-family-inspiration: 'Inspiration', sans-serif;
+    --text-black: rgba(0, 0, 0, 1);
+}
+
+
+.text-black {
+    -fx-text-fill: black; 
+}
+
+/* Reset */
+* {
+    -fx-padding: 0;
+    -fx-margin: 0;
+}
+
+body {
+    -fx-background-color: white;
+}
+
+.rectangle-50-2 {
+    -fx-background-color: white;
+}
+
+
+.text-3 {
+    -fx-font-family: "Inria Sans";
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+}
+
+.text-6 {
+    -fx-font-family: "Inria Sans";
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+}
+
+.text-7 {
+    -fx-font-family: "Inspiration";
+    -fx-font-size: 32px;
+    -fx-text-fill: black;
+}
+
+
+.rounded-rectangle-4 {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.rounded-rectangle-5 {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+
+.frame-4-1 {
+    -fx-background-color: white;
+}
+
+

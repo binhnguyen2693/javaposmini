@@ -1,7 +1,9 @@
 com\mycompany\posmini\InvoiceController.class
 com\mycompany\posmini\SplashController.class
+com\mycompany\posmini\StatisticsController.class
 module-info.class
 com\mycompany\posmini\MainController.class
+com\mycompany\posmini\Employee.class
 com\mycompany\posmini\App.class
 com\mycompany\posmini\DBConnect.class
 com\mycompany\posmini\LoginController.class
