@@ -1,0 +1,36 @@
+package com.mycompany.posmini;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class ShowNhanVien {
+    public static void main(String[] args) {
+        String url = "jdbc:sqlserver://ANHTOET:1433;databaseName=Posmini;encrypt=false;";
+        String user = "sa";       // sửa theo tài khoản SQL của bạn
+        String password = "12345"; // sửa theo mật khẩu SQL của bạn
+
+        try (Connection conn = DriverManager.getConnection(url, user, password);
+             Statement stmt = conn.createStatement()) {
+
+            String query = "SELECT MaNV, TenNV, ChucVu, Luong, SoDienThoai FROM QuanLyNhanVien";
+            ResultSet rs = stmt.executeQuery(query);
+
+            System.out.println("===== DANH SÁCH NHÂN VIÊN =====");
+
+            while (rs.next()) {
+                int maNV = rs.getInt("MaNV");
+                String tenNV = rs.getString("TenNV");
+                String chucVu = rs.getString("ChucVu");
+                double luong = rs.getDouble("Luong");
+                String soDienThoai = rs.getString("SoDienThoai");
+
+                System.out.println(maNV + " | " + tenNV + " | " + chucVu + " | " + luong + " | " + soDienThoai);
+            }
+
+        } catch (Exception e) {
+            System.err.println("Lỗi khi truy vấn dữ liệu nhân viên: " + e.getMessage());
+        }
+    }
+}
